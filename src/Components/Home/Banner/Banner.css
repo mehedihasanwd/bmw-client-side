@@ -1,0 +1,19 @@
+.text-lg {
+  background: red;
+  font-size: 40px;
+  padding: 10px;
+  opacity: 0.9;
+  border-radius: 3px;
+}
+
+.banner {
+  object-fit: cover;
+  height: 550px;
+}
+
+.text-sm {
+  background: blue;
+  padding: 10px;
+  opacity: 0.9;
+  border-radius: 3px;
+}

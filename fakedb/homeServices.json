@@ -1,0 +1,62 @@
+[
+  {
+    "name": "BMW 7 SERIES SEDAN",
+    "img": "https://i.ibb.co/TwGLmgh/1-sedan7.png",
+    "desc": "The BMW 7 Series Sedan impresses from the very first moment with its exceptional presence. The self-assured character is primarily underlined by the distinctive front. In the side, the vertical Air Breather emphasizes the height of the vehicle. The interplay between the paint finish in Bernina Grey with shimmering amber effect creates an elegance that, when combined with the 20 inch wheels, delivers a statement of commanding dynamics. A greeting from the Welcome and Goodbye light staging beckons before you even enter your BMW. The interior welcomes you with exclusive, high-quality materials which, together with the innovative connectivity features, produce a hitherto unachieved ambience.",
+    "price": "1000"
+  },
+  {
+    "name": "BMW 5 SERIES SEDAN",
+    "img": "https://i.ibb.co/0ctsD32/2-sedan5.jpg",
+    "desc": "The BMW 5 Series Sedan guides sportiness and self-assuredness to the next common level – thanks above all to the typical BMW proportions such as long wheelbase, the extended bonnet and the flowing roof line. Precise contours provide a fascinating contrast to the streamlined, reduced surfaces, creating a modern, puristic look. In particular, the BMW kidney grille and BMW Laserlight give the front a dynamic and innovative character. The headlights are seamlessly connected with the kidney grille, which additionally underlines the breadth of the vehicle and generates an exceptional elegance and presence that is maintained all the way through to the free-form tailpipes in the rear apron.",
+    "price": "900"
+  },
+  {
+    "name": "THE NEW BMW X1.",
+    "img": "https://i.ibb.co/VYXRTQj/3-bmw-x1.jpg",
+    "desc": "Every movement is eye-catching: the new BMW X1 impresses with its striking shape – and with every detail, too. Its powerfully defined silhouette inspires with its long wheelbase and short overhangs. The striking BMW kidney grille and bold bumper in conjunction with narrow Adaptive LED headlights guarantee an extremely authoritative appearance. In the interior, elegance and spaciousness match versatility in every respect. Exceptional for others, but included as standard in the BMW X Series: superiority on all terrains. Innovative technologies such as the Steptronic transmission or the BMW xDrive all-wheel drive system and the sporty yet efficient BMW TwinPower Turbo three-cylinder and four-cylinder engines make the BMW X1 a confident companion on all routes.",
+    "price": "2000"
+  },
+  {
+    "name": "THE NEW BMW X2.",
+    "img": "https://i.ibb.co/FJfFZyp/4-bmw-x2.jpg",
+    "desc": "Thrilling at first glance: the self-confident front with the powerful bumper and the large three-part air intakes. The unique design language extends to the rear. The tailgate is flush with the apron, creating an exceptionally aesthetic look. The sporty-elegant design of the exterior consistently continues the interior design. Generous decorative surfaces underline the premium claim, while practical storage options round off the design in an extremely sensible way.",
+    "price": "3000"
+  },
+  {
+    "name": "THE NEW BMW X3.",
+    "img": "https://i.ibb.co/SyMpScR/5-bmw-x3.jpg",
+    "desc": "The BMW X3 is a statement of unlimited opportunities and an expression of sheer presence and freedom. From the very first glance, it impresses with its athletic appearance and fascinates with an exciting driving experience. Thanks to partially autonomous driving and the intelligent all-wheel drive system BMW xDrive, it offers supreme ride comfort both on and off the road. It therefore redefines the benchmarks in its class and makes one thing unmistakably clear: there is a great difference in how you reach your destinations. Harmonious proportions, powerful contours and the extreme emphasis on width of the front and rear view join up to produce a lasting appearance – and one that is also impressively continued in the redesigned, exclusive interior.",
+    "price": "4000"
+  },
+  {
+    "name": "THE NEW BMW X5.",
+    "img": "https://i.ibb.co/cCFGp9t/6-bmw-x5.jpg",
+    "desc": "The BMW X5 offers driving pleasure on any terrain thanks to the enhanced BMW TwinPower Turbo power unit and the outstanding traction of BMW xDrive all-wheel drive. The optional xOffroad package provides finer tuning: four selectable off-road modes adjust the all-wheel drive precisely to the current ground conditions. The best of both worlds: with the BMW X5 xDrive45e, you experience sustainable mobility and efficient driving dynamics. Explore the numerous benefits of this innovative BMW hybrid vehicle. BMW M Performance Parts allow you to give your BMW X5 the maximum amount of motor racing character. Choose from optically enhanced design features for the exterior as well as attractive forged and light alloy wheels. With Original BMW Accessories, you adapt your BMW to your personal wishes: the products are perfectly matched to the BMW X5 in terms of quality, design and performance.",
+    "price": "5000"
+  },
+  {
+    "name": "THE NEW BMW X7.",
+    "img": "https://i.ibb.co/CVGsycH/7-bmw-x7.jpg",
+    "desc": "A statement of the luxury class: the new BMW X7 is the elegant fusion of presence and personality. Despite its majestic appearance, it gives an impression of lightness and agility thanks to the puristic design and athletic styling. At the same time, the considerable spaciousness of the interior offers a pioneering interplay of exclusivity, functionality and freedom – incomparable comfort all the way to the third row of seats. Charm is its essence. Elegance its character. Outstanding technology and innovation for an exceptional driving experience. Connectivity and digital services provide an additional highlight of the BMW X7. From the simple, effortless opening of the vehicle using the Digital Key with your smartphone, via a modern and intuitive operating concept in the cockpit, driving and parking assistant through to the Parking Space Assistant including Reversing Assistant: a wide range of functions and assistants together with the innovative features of the BMW Personal CoPilot structure every trip to match individual wishes and provide maximum comfort.",
+    "price": "6000"
+  },
+  {
+    "name": "THE 8 GRAN COUPE.",
+    "img": "https://i.ibb.co/Mcp9R10/8-the8.jpg",
+    "desc": "The large, luxurious BMW 8 Series Gran Coupe is a unique vehicle in the BMW lineup. Its exterior design combines the sporty styling of a coupe with the spacious four-door size of a sedan. Highly comfortable seats, the finest leather upholstery, premium sound systems, and much more place the 2022 8 Gran Coupe in a luxury league of its own. The 2022 BMW 8 Series Gran Coupe is available with either a 6-cylinder gasoline engine (840i and 840i xDrive models), a V-8 gasoline engine (M850i xDrive and M8 Gran Coupes), or a hand-tuned V-8 Bi-Turbo gasoline engine (ALPINA B8).",
+    "price": "7000"
+  },
+  {
+    "name": "THE M8 COMPETITION COUPE.",
+    "img": "https://i.ibb.co/JnY5nwc/9-theM8.jpg",
+    "desc": "The BMW M models in the 8 Series family are precisely engineered and designed for performance driving. This impacts everything – from the seats, exhaust, suspension, steering, wheels, aerodynamics, and more. For example, the M8 Competition Coupe offers more pure performance power than the 8 Coupe, featuring a 4.4-liter V-8 engine that delivers 617 hp and a 0-60 mph of 3.0 seconds. The M8 Competition Coupe has standard Adaptive M Suspension, which yields superior handling and an impressive amount of control under high lateral and longitudinal load. You can also change the dynamics for a smooth or sporty ride, based on different driving modes – including COMFORT, SPORT, and SPORT+.",
+    "price": "8000"
+  },
+  {
+    "name": "BMW Z4 sDrive30i Roadster",
+    "img": "https://i.ibb.co/QKPrtFM/10-theZ4.jpg",
+    "desc": "Timeless two-seater style come to life in this sporty roadster. Dynamic performance, refined design, and advanced technology are perfectly blended for the modern-day thrill seeker. BMW’s iDrive 7.0 Operating System supports intuitive technology like BMW Intelligent Personal Assistant – and includes standard Apple CarPlay™ and Android Auto™ compatibility. Experience efficient, quick shifts with the standard 8-speed Sport Automatic Transmission. Adjustable drive modes let you customize your roadster's responsiveness. Boost performance with the optional Dynamic Handling Package, which adds M Sport Brakes, M Differential, and Adaptive M Suspension",
+    "price": "9000"
+  }
+]
