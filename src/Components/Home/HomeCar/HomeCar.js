@@ -15,7 +15,9 @@ const HomeCar = (props) => {
           <Card.Title>
             <span className="text-danger">Price: </span> ${price}
           </Card.Title>
-          <Card.Text>{desc.slice(0, 230)}</Card.Text>
+          <Card.Text>
+            {desc.split(" ").slice(0, 40).toString().replace(/,/g, " ")}
+          </Card.Text>
           <Link to={`/car/${_id}`}>
             <button className="btn-danger fs-5 rounded-1 border-0 px-3 py-1">
               BUY NOW
