@@ -2,6 +2,8 @@ import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import useFirebase from "../../Hooks/useFirebase";
+import siteLogo from "../../Media/logo.png";
+import "./Header.css";
 
 const Header = () => {
   const { user, logOut } = useFirebase();
@@ -16,7 +18,8 @@ const Header = () => {
       >
         <Container>
           <Navbar.Brand href="/home">
-            <span className="text-white">BMW</span>
+            {/* <span className="text-white">BMW</span> */}
+            <img src={siteLogo} alt="" className="logo" />
           </Navbar.Brand>
           <Navbar.Toggle />
           <Navbar.Collapse className="mx-1 justify-content-end">
