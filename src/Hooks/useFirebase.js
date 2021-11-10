@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import firebaseAuthentication from "../Firebase/firebase.init";
 import {
   getAuth,
@@ -6,6 +6,9 @@ import {
   signOut,
   onAuthStateChanged,
   signInWithEmailAndPassword,
+  updateProfile,
+  GoogleAuthProvider,
+  signInWithPopup,
 } from "firebase/auth";
 
 // Initialize Firebase Authentication
@@ -17,6 +20,9 @@ const useFirebase = () => {
 
   // Get Auth
   const auth = getAuth();
+
+  // Google Provider
+  const googleProvider = new GoogleAuthProvider();
 
   // Register User
   const registerUser = (email, password, history) => {
@@ -36,6 +42,21 @@ const useFirebase = () => {
   const signInUsingEmail = (email, password, location, history) => {
     setIsLoading(true);
     signInWithEmailAndPassword(auth, email, password)
+      .then((result) => {
+        const user = result.user;
+        const destination = location?.state?.from || "/";
+        history.replace(destination);
+      })
+      .catch((error) => {
+        const errorMessage = error.message;
+      })
+      .finally(() => setIsLoading(false));
+  };
+
+  // Sign In Using Google
+  const signInUsingGoogle = (location, history) => {
+    setIsLoading(true);
+    signInWithPopup(auth, googleProvider)
       .then((result) => {
         setUser(result.user);
         const destination = location?.state?.from || "/";
@@ -58,7 +79,7 @@ const useFirebase = () => {
       setIsLoading(false);
     });
     return () => unsubscribe;
-  }, []);
+  }, [auth]);
 
   // LogOut User
   const logOut = () => {
@@ -76,6 +97,7 @@ const useFirebase = () => {
     registerUser,
     logOut,
     signInUsingEmail,
+    signInUsingGoogle,
     isLoading,
   };
 };

@@ -14,7 +14,7 @@ const Cars = () => {
   }, []);
 
   return (
-    <div className="container py-5">
+    <div className="container min-vh-100 py-5">
       <h2>
         Our All New<span className="text-danger"> BMWs</span>
       </h2>

@@ -11,13 +11,17 @@ import {
   Alert,
 } from "@mui/material";
 import { useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useHistory, useLocation } from "react-router-dom";
 import useAuth from "../../../Hooks/useAuth";
 
 const Register = () => {
   const [loginData, setLoginData] = useState({});
+
+  // Location, History
+  const location = useLocation();
   const history = useHistory();
-  const { user, registerUser, isLoading } = useAuth();
+
+  const { user, registerUser, isLoading, signInUsingGoogle } = useAuth();
 
   const handleOnBlur = (e) => {
     const field = e.target.name;
@@ -37,6 +41,11 @@ const Register = () => {
     e.target.reset();
     e.preventDefault();
   };
+
+  const handleGoogleSignIn = () => {
+    signInUsingGoogle(location, history);
+  };
+
   return (
     <>
       <Container className="min-vh-100">
@@ -146,6 +155,27 @@ const Register = () => {
                     </Alert>
                   )}
                 </form>
+                <div className="text-center">
+                  ---------------Or---------------
+                </div>
+                <Button
+                  onClick={handleGoogleSignIn}
+                  className="main-btn"
+                  sx={{
+                    color: "#fff",
+                    letterSpacing: "1px",
+                    fontSize: "18px",
+                    padding: "13px 30px 9px 30px",
+                    background:
+                      "linear-gradient(45deg, rgba(29, 209, 161,0.8), rgba(72, 219, 251,1.0) )",
+                    border: "none",
+                    my: 2,
+                    transition: "0.3s ease",
+                    width: 1,
+                  }}
+                >
+                  Google Sign Up
+                </Button>
               </Box>
             )}
             {isLoading && <CircularProgress />}

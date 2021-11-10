@@ -8,6 +8,7 @@ import Login from "./Components/Login/Login/Login";
 import AuthProvider from "./Components/Context/AuthProvider/AuthProvider";
 import Header from "./Components/Shared/Header";
 import Cars from "./Components/Cars/Cars";
+import PrivateRoute from "./Components/Login/PrivateRoute/PrivateRoute";
 
 function App() {
   return (
@@ -25,9 +26,9 @@ function App() {
             <Route path="/cars">
               <Cars></Cars>
             </Route>
-            <Route path="/purchase">
+            <PrivateRoute exact path="/car/:id">
               <Purchase></Purchase>
-            </Route>
+            </PrivateRoute>
             <Route path="/login">
               <Login></Login>
             </Route>

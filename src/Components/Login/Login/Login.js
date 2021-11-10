@@ -16,7 +16,7 @@ import useAuth from "../../../Hooks/useAuth";
 
 const Login = () => {
   const [loginData, setLoginData] = useState({});
-  const { user, signInUsingEmail, isLoading } = useAuth();
+  const { user, signInUsingEmail, isLoading, signInUsingGoogle } = useAuth();
 
   // Location, History
   const location = useLocation();
@@ -32,8 +32,12 @@ const Login = () => {
 
   const handleLoginSubmit = (e) => {
     signInUsingEmail(loginData.email, loginData.password, location, history);
-    e.target.reset();
     e.preventDefault();
+    e.target.reset();
+  };
+
+  const handleGoogleSignIn = () => {
+    signInUsingGoogle(location, history);
   };
 
   return (
@@ -122,6 +126,27 @@ const Login = () => {
                   </Alert>
                 )}
               </form>
+              <div className="text-center">
+                ---------------Or---------------
+              </div>
+              <Button
+                onClick={handleGoogleSignIn}
+                className="main-btn"
+                sx={{
+                  color: "#fff",
+                  letterSpacing: "1px",
+                  fontSize: "18px",
+                  padding: "13px 30px 9px 30px",
+                  background:
+                    "linear-gradient(45deg, rgba(29, 209, 161,0.8), rgba(72, 219, 251,1.0) )",
+                  border: "none",
+                  my: 2,
+                  transition: "0.3s ease",
+                  width: 1,
+                }}
+              >
+                Google Sign In
+              </Button>
             </Box>
           </Grid>
         </Grid>

@@ -3,7 +3,7 @@ import { Card, CardGroup } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const Car = (props) => {
-  const { name, img, desc, price } = props.car;
+  const { name, img, _id, desc, price } = props.car;
   return (
     <CardGroup>
       <Card className="shadow-lg">
@@ -16,7 +16,7 @@ const Car = (props) => {
             <span className="text-danger">Price: </span> ${price}
           </Card.Title>
           <Card.Text>{desc}</Card.Text>
-          <Link to="/purchase">
+          <Link to={`/car/${_id}`}>
             <button className="btn-danger fs-5 rounded-1 border-0 px-3 py-1">
               BUY NOW
             </button>
