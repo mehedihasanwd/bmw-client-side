@@ -13,7 +13,7 @@ const Service = (props) => {
           </Card.Title>
           <Card.Text>{review}</Card.Text>
           <Card.Title>
-            <span className="text-danger">Review: </span> {rating}
+            <span className="text-danger">Rating: </span> {rating}
           </Card.Title>
         </Card.Body>
       </Card>
