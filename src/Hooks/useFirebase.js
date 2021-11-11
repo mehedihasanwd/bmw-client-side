@@ -25,12 +25,22 @@ const useFirebase = () => {
   const googleProvider = new GoogleAuthProvider();
 
   // Register User
-  const registerUser = (email, password, history) => {
+  const registerUser = (email, password, name, history) => {
     setIsLoading(true);
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
-        setUser(result.user);
+        const newUser = { email, displayName: name };
+        // Send name to firebase after creation
+        updateProfile(auth.currentUser, {
+          displayName: name,
+        })
+          .then(() => {})
+          .catch((error) => {});
+
+        setUser(newUser);
+
         history.replace("/");
+        window.location.reload();
       })
       .catch((error) => {
         const errorMessage = error.message;

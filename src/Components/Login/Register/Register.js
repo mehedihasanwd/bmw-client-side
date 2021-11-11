@@ -38,7 +38,7 @@ const Register = () => {
     }
     alert("User Registered Successfully");
     registerUser(loginData.email, loginData.password, loginData.name, history);
-    e.target.reset();
+    // e.target.reset();
     e.preventDefault();
   };
 

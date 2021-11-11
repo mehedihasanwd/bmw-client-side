@@ -1,0 +1,28 @@
+.add-new-product form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-new-product form input,
+textarea {
+  width: 50%;
+  margin: 5px 0px;
+  border-radius: 1px;
+  outline: none;
+  border: 1px solid #dc3545;
+  padding: 10px;
+}
+
+.add-new-product .btn-submit {
+  background: #dc3545;
+  color: white;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.add-new-product .btn-submit:hover {
+  background: #f73c4f;
+}

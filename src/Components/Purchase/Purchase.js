@@ -59,7 +59,7 @@ const Purchase = () => {
 
   return (
     <div className="min-vh-100 container py-3">
-      <h2>Purchase Your Item</h2>
+      <h2>Purchase Your BMW</h2>
       <h3>Car Id: {car?._id}</h3>
 
       <div className="row row-cols-1 row-cols-md-2 g-2 py-5">

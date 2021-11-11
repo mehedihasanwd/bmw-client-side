@@ -44,8 +44,8 @@ const Header = () => {
             )}
 
             {/* {user?.email ? (
-              <Nav.Link className="text-danger" as={Link} to="/addservice">
-                Add A New Tour
+              <Nav.Link className="text-danger" as={Link} to="/addacar">
+                Add A New Car
               </Nav.Link>
             ) : (
               ""
@@ -66,7 +66,7 @@ const Header = () => {
 
             <Nav.Link className="text-warning" eventKey={2}>
               <span className="me-2 text-white">Signed in as:</span>
-              {user?.displayName ? user?.displayName : user?.email}
+              {user?.displayName ? user?.displayName : user?.displayName}
             </Nav.Link>
           </Navbar.Collapse>
         </Container>
