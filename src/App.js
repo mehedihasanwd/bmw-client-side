@@ -14,6 +14,8 @@ import MyOrders from "./Components/MyOrders/MyOrders/MyOrders";
 import ManageAllOrders from "./Components/ManageAllOrders/ManageAllOrders";
 import ManageProducts from "./Components/ManageProducts/ManageProducts";
 import AddAReview from "./Components/AddAReview/AddAReview";
+import Pay from "./Components/Pay/Pay";
+import DashBoard from "./Components/Dashboard/Dashboard/Dashboard";
 
 function App() {
   return (
@@ -45,6 +47,12 @@ function App() {
             </Route>
             <Route path="/addareview">
               <AddAReview></AddAReview>
+            </Route>
+            <Route path="/pay">
+              <Pay></Pay>
+            </Route>
+            <Route path="/dashboard">
+              <DashBoard></DashBoard>
             </Route>
             <PrivateRoute exact path="/car/:id">
               <Purchase></Purchase>

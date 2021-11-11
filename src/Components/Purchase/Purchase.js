@@ -35,6 +35,7 @@ const Purchase = () => {
     const date = new Date();
     const dateRegion = date.toLocaleDateString();
     const price = car.price;
+    const status = "Pending";
     const ordersInfo = {
       customerName,
       email,
@@ -43,6 +44,7 @@ const Purchase = () => {
       img,
       price,
       orderDate: dateRegion,
+      status: status,
     };
 
     fetch("https://still-atoll-84410.herokuapp.com/orders", {
