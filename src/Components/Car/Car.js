@@ -15,7 +15,9 @@ const Car = (props) => {
           <Card.Title>
             <span className="text-danger">Price: </span> ${price}
           </Card.Title>
-          <Card.Text>{desc}</Card.Text>
+          <Card.Text>
+            <span className="text-danger">Description </span> ${desc}
+          </Card.Text>
           <Link to={`/car/${_id}`}>
             <button className="btn-danger fs-5 rounded-1 border-0 px-3 py-1">
               BUY NOW

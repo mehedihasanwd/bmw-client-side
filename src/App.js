@@ -10,6 +10,8 @@ import Header from "./Components/Shared/Header";
 import Cars from "./Components/Cars/Cars";
 import PrivateRoute from "./Components/Login/PrivateRoute/PrivateRoute";
 import AddAProduct from "./Components/AddAProduct/AddAProduct";
+import MyOrders from "./Components/MyOrders/MyOrders/MyOrders";
+import ManageAllOrders from "./Components/ManageAllOrders/ManageAllOrders";
 
 function App() {
   return (
@@ -26,6 +28,12 @@ function App() {
             </Route>
             <Route path="/cars">
               <Cars></Cars>
+            </Route>
+            <Route path="/myorders">
+              <MyOrders></MyOrders>
+            </Route>
+            <Route path="/manageallorders">
+              <ManageAllOrders></ManageAllOrders>
             </Route>
             <Route path="/addaproduct">
               <AddAProduct></AddAProduct>

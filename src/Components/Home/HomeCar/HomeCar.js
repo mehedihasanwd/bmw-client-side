@@ -16,7 +16,10 @@ const HomeCar = (props) => {
             <span className="text-danger">Price: </span> ${price}
           </Card.Title>
           <Card.Text>
-            {desc.split(" ").slice(0, 40).toString().replace(/,/g, " ")}
+            <Card.Text>
+              <span className="text-danger">Description </span>{" "}
+              {desc.split(" ").slice(0, 40).toString().replace(/,/g, " ")}
+            </Card.Text>
           </Card.Text>
           <Link to={`/car/${_id}`}>
             <button className="btn-danger fs-5 rounded-1 border-0 px-3 py-1">
