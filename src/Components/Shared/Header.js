@@ -18,7 +18,6 @@ const Header = () => {
       >
         <Container>
           <Navbar.Brand href="/home">
-            {/* <span className="text-white">BMW</span> */}
             <img src={siteLogo} alt="" className="logo" />
           </Navbar.Brand>
           <Navbar.Toggle />
@@ -31,10 +30,6 @@ const Header = () => {
               Cars
             </Nav.Link>
 
-            {/* <Nav.Link className="text-danger" as={Link} to="/explore">
-              My Orders
-            </Nav.Link> */}
-
             {user?.email ? (
               <Nav.Link className="text-danger" as={Link} to="/dashboard">
                 Dashboard
@@ -42,14 +37,6 @@ const Header = () => {
             ) : (
               ""
             )}
-
-            {/* {user?.email ? (
-              <Nav.Link className="text-danger" as={Link} to="/addacar">
-                Add A New Car
-              </Nav.Link>
-            ) : (
-              ""
-            )} */}
 
             {user?.email ? (
               <button
