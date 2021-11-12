@@ -75,8 +75,8 @@ const Register = () => {
             </Typography>
 
             {!isLoading && (
-              <Box sx={{ boxShadow: 2, p: 2, borderRadius: 1, my: 2 }}>
-                <form onSubmit={handleLoginSubmit}>
+              <Box sx={{ boxShadow: 2, p: 2, borderRadius: 1, mb: 10 }}>
+                <form className="mb-5" onSubmit={handleLoginSubmit}>
                   <TextField
                     sx={{ width: "100%", my: 1 }}
                     id="standard-basic"
