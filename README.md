@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Welcome to "BMW" Car Server Side
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+About BMW Website Client Side: This is the client side of BMW Website and it is built with React JS, Firebase, React Bootstrap, Material UI etc.
+
+BMW Website Client Side Features: • This a niche site (BMW Car) Client side • This is a fast loading client side as it is made with one of the most popular UI libraries called React JS • It has Admin & User Dashboard Functionality • It also has functionality to for customers to purchase or delete orders • An admin can delete any orders and also make any user as an admin
 
 ## Available Scripts
 
