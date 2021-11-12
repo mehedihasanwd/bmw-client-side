@@ -49,8 +49,8 @@ const Register = () => {
 
   return (
     <>
-      <Container className="min-vh-100 container py-5">
-        <Grid sx={{ height: "70vh", py: 5, my: 4 }} container spacing={3}>
+      <Container className="min-vh-100 container py-3">
+        <Grid sx={{ py: 10 }} container spacing={3}>
           <Grid
             sx={{
               display: "flex",
@@ -66,7 +66,7 @@ const Register = () => {
             md={12}
           >
             <Typography
-              sx={{ color: "#00b894", pt: 15 }}
+              sx={{ color: "#00b894", pb: 3 }}
               variant="h4"
               gutterBottom
               component="div"
@@ -75,8 +75,8 @@ const Register = () => {
             </Typography>
 
             {!isLoading && (
-              <Box sx={{ boxShadow: 2, p: 2, borderRadius: 1, mb: 10 }}>
-                <form className="mb-5" onSubmit={handleLoginSubmit}>
+              <Box sx={{ boxShadow: 2, p: 2, borderRadius: 1 }}>
+                <form onSubmit={handleLoginSubmit}>
                   <TextField
                     sx={{ width: "100%", my: 1 }}
                     id="standard-basic"
