@@ -15,15 +15,27 @@ import MailIcon from "@mui/icons-material/Mail";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import { NavLink } from "react-router-dom";
 import useAuth from "../../../Hooks/useAuth";
+import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
+
+// Import Pages
+import ManageProducts from "../ManageProducts/ManageProducts";
+import ManageAllOrders from "../ManageAllOrders/ManageAllOrders";
+import MyOrders from "../MyOrders/MyOrders";
+import Pay from "../Pay/Pay";
+import CreateAdmin from "../CreateAdmin/CreateAdmin";
+import AddAProduct from "../AddAProduct/AddAProduct";
+import AddAReview from "../AddAReview/AddAReview";
 
 const drawerWidth = 200;
 
 function DashBoard(props) {
+  const { logOut, admin } = useAuth();
+
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const { logOut } = useAuth();
+
+  let { path, url } = useRouteMatch();
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -32,37 +44,81 @@ function DashBoard(props) {
   const drawer = (
     <div className="min-vh-100 container py-3">
       <Toolbar />
+      <Box className="text-start">
+        <Link to="/home">
+          <button className="btn-danger border-0 me-3 rounded-1 mb-4">
+            Home
+          </button>
+        </Link>
+      </Box>
       <Divider />
-      <List>
-        {["Inbox", "Starred", "Send email", "Drafts"].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-      <Divider></Divider>
-      <Box>
-        <NavLink to="/pay">
-          <button className="btn">Pay</button>
-        </NavLink>
-      </Box>
-      <Box>
-        <NavLink to="/myorders">
-          <button className="btn">My Orders</button>
-        </NavLink>
-      </Box>
-      <Box>
-        <NavLink to="/addareview">
-          <button className="btn">Review</button>
-        </NavLink>
-      </Box>
-      <Box>
-        <button onClick={logOut} className="btn">
-          LogOut
-        </button>
+
+      <Box className="text-start mt-2">
+        {admin ? (
+          <Box>
+            <Box>
+              <Link to={`${url}/manageproducts`}>
+                <button className="btn-danger border-0 me-3 rounded-1 mt-3 mb-1">
+                  Manage Cars
+                </button>
+              </Link>
+            </Box>
+            <Box>
+              <Link to={`${url}/manageallorders`}>
+                <button className="btn-danger border-0 me-3 rounded-1 my-1">
+                  Manage All Orders
+                </button>
+              </Link>
+            </Box>
+            <Box>
+              <Link to={`${url}/addacar`}>
+                <button className="btn-danger border-0 me-3 rounded-1 my-1">
+                  Add A Car
+                </button>
+              </Link>
+            </Box>
+            <Box>
+              <Link to={`${url}/createadmin`}>
+                <button className="btn-danger border-0 me-3 rounded-1 my-1">
+                  Make Admin
+                </button>
+              </Link>
+            </Box>
+          </Box>
+        ) : (
+          <Box>
+            <Box>
+              <Link to={`${url}/myorders`}>
+                <button className="btn-danger border-0 me-3 rounded-1 my-1">
+                  My Orders
+                </button>
+              </Link>
+            </Box>
+            <Box>
+              <Link to={`${url}/addareview`}>
+                <button className="btn-danger border-0 me-3 rounded-1 my-1">
+                  Add A Review
+                </button>
+              </Link>
+            </Box>
+            <Box>
+              <Link to={`${url}/pay`}>
+                <button className="btn-danger border-0 me-3 rounded-1 my-1">
+                  Pay
+                </button>
+              </Link>
+            </Box>
+          </Box>
+        )}
+
+        <Box>
+          <button
+            onClick={logOut}
+            className="btn-danger border-0 me-3 rounded-1 my-1"
+          >
+            LogOut
+          </button>
+        </Box>
       </Box>
     </div>
   );
@@ -91,7 +147,7 @@ function DashBoard(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Responsive drawer
+            {admin ? <Box>Admin Dashboard</Box> : <Box>User Dashboard</Box>}
           </Typography>
         </Toolbar>
       </AppBar>
@@ -142,21 +198,30 @@ function DashBoard(props) {
         }}
       >
         <Toolbar />
-        <Typography paragraph>Main Content</Typography>
-        <Typography paragraph>
-          Consequat mauris nunc congue nisi vitae suscipit. Fringilla est
-          ullamcorper eget nulla facilisi etiam dignissim diam. Pulvinar
-          elementum integer enim neque volutpat ac tincidunt. Ornare suspendisse
-          sed nisi lacus sed viverra tellus. Purus sit amet volutpat consequat
-          mauris. Elementum eu facilisis sed odio morbi. Euismod lacinia at quis
-          risus sed vulputate odio. Morbi tincidunt ornare massa eget egestas
-          purus viverra accumsan in. In hendrerit gravida rutrum quisque non
-          tellus orci ac. Pellentesque nec nam aliquam sem et tortor. Habitant
-          morbi tristique senectus et. Adipiscing elit duis tristique
-          sollicitudin nibh sit. Ornare aenean euismod elementum nisi quis
-          eleifend. Commodo viverra maecenas accumsan lacus vel facilisis. Nulla
-          posuere sollicitudin aliquam ultrices sagittis orci a.
-        </Typography>
+        {/* Routing Start Here */}
+        <Switch>
+          <Route exact path={`${path}/createadmin`}>
+            <CreateAdmin></CreateAdmin>
+          </Route>
+          <Route exact path={`${path}/manageproducts`}>
+            <ManageProducts></ManageProducts>
+          </Route>
+          <Route exact path={`${path}/manageallorders`}>
+            <ManageAllOrders></ManageAllOrders>
+          </Route>
+          <Route exact path={`${path}/myorders`}>
+            <MyOrders></MyOrders>
+          </Route>
+          <Route exact path={`${path}/addacar`}>
+            <AddAProduct></AddAProduct>
+          </Route>
+          <Route path={`${path}/addareview`}>
+            <AddAReview></AddAReview>
+          </Route>
+          <Route exact path={`${path}/pay`}>
+            <Pay></Pay>
+          </Route>
+        </Switch>
       </Box>
     </Box>
   );

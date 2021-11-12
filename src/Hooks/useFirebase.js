@@ -17,6 +17,7 @@ firebaseAuthentication();
 const useFirebase = () => {
   const [user, setUser] = useState({});
   const [isLoading, setIsLoading] = useState(true);
+  const [admin, setAdmin] = useState(false);
 
   // Get Auth
   const auth = getAuth();
@@ -30,14 +31,21 @@ const useFirebase = () => {
     createUserWithEmailAndPassword(auth, email, password)
       .then((result) => {
         const newUser = { email, displayName: name };
-        // Send name to firebase after creation
+
+        // Set USer
+        setUser(newUser);
+
+        // Save User To Database
+        saveUserPost(email, name);
+
+        /* "POST" */
+
+        // Send name to firebase after user creation
         updateProfile(auth.currentUser, {
           displayName: name,
         })
           .then(() => {})
           .catch((error) => {});
-
-        setUser(newUser);
 
         history.replace("/");
         window.location.reload();
@@ -68,8 +76,11 @@ const useFirebase = () => {
     setIsLoading(true);
     signInWithPopup(auth, googleProvider)
       .then((result) => {
-        setUser(result.user);
+        // setUser(result.user);
         const destination = location?.state?.from || "/";
+        const user = result.user;
+        // saveUser(user.email, user.displayName, "PUT");
+        saveUserPut(user.email, user.displayName);
         history.replace(destination);
       })
       .catch((error) => {
@@ -91,6 +102,36 @@ const useFirebase = () => {
     return () => unsubscribe;
   }, [auth]);
 
+  // Collect Admin
+  useEffect(() => {
+    fetch(`https://still-atoll-84410.herokuapp.com/users/${user?.email}`)
+      .then((res) => res.json())
+      .then((data) => setAdmin(data.admin));
+  }, [user?.email]);
+
+  // User Saved To Database
+  const saveUserPost = (email, displayName) => {
+    const user = { email, displayName };
+    fetch(`https://still-atoll-84410.herokuapp.com/users`, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(user),
+    }).then();
+  };
+
+  const saveUserPut = (email, displayName) => {
+    const user = { email, displayName };
+    fetch(`https://still-atoll-84410.herokuapp.com/users`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(user),
+    }).then();
+  };
+
   // LogOut User
   const logOut = () => {
     setIsLoading(true);
@@ -104,6 +145,7 @@ const useFirebase = () => {
 
   return {
     user,
+    admin,
     registerUser,
     logOut,
     signInUsingEmail,

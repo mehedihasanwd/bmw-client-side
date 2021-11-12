@@ -9,20 +9,20 @@ import AuthProvider from "./Components/Context/AuthProvider/AuthProvider";
 import Header from "./Components/Shared/Header";
 import Cars from "./Components/Cars/Cars";
 import PrivateRoute from "./Components/Login/PrivateRoute/PrivateRoute";
-import AddAProduct from "./Components/AddAProduct/AddAProduct";
-import MyOrders from "./Components/MyOrders/MyOrders/MyOrders";
-import ManageAllOrders from "./Components/ManageAllOrders/ManageAllOrders";
-import ManageProducts from "./Components/ManageProducts/ManageProducts";
-import AddAReview from "./Components/AddAReview/AddAReview";
-import Pay from "./Components/Pay/Pay";
 import DashBoard from "./Components/Dashboard/Dashboard/Dashboard";
+// import AddAProduct from "./Components/Dashboard/AddAProduct/AddAProduct";
+// import MyOrders from "./Components/Dashboard/MyOrders/MyOrders";
+// import ManageAllOrders from "./Components/Dashboard/ManageAllOrders/ManageAllOrders";
+// import ManageProducts from "./Components/Dashboard/ManageProducts/ManageProducts";
+// import AddAReview from "./Components/Dashboard/AddAReview/AddAReview";
+// import Pay from "./Components/Dashboard/Pay/Pay";
+// import CreateAdmin from "./Components/Dashboard/CreateAdmin/CreateAdmin";
 
 function App() {
   return (
     <div className="App">
       <AuthProvider>
         <Router>
-          <Header></Header>
           <Switch>
             <Route exact path="/">
               <Home></Home>
@@ -33,11 +33,14 @@ function App() {
             <Route path="/cars">
               <Cars></Cars>
             </Route>
-            <Route path="/myorders">
+            {/* <Route path="/myorders">
               <MyOrders></MyOrders>
             </Route>
             <Route path="/manageallorders">
               <ManageAllOrders></ManageAllOrders>
+            </Route>
+            <Route path="/makeadmin">
+              <CreateAdmin></CreateAdmin>
             </Route>
             <Route path="/manageproducts">
               <ManageProducts></ManageProducts>
@@ -50,11 +53,12 @@ function App() {
             </Route>
             <Route path="/pay">
               <Pay></Pay>
-            </Route>
-            <Route path="/dashboard">
+            </Route> */}
+            <PrivateRoute path="/dashboard">
               <DashBoard></DashBoard>
-            </Route>
+            </PrivateRoute>
             <PrivateRoute exact path="/car/:id">
+              <Header></Header>
               <Purchase></Purchase>
             </PrivateRoute>
             <Route path="/login">
@@ -64,7 +68,6 @@ function App() {
               <Register></Register>
             </Route>
           </Switch>
-          <Footer></Footer>
         </Router>
       </AuthProvider>
     </div>
