@@ -1,4 +1,4 @@
-# Welcome to "BMW" Car Server Side
+# Welcome to "BMW" Car Client Side
 
 About BMW Website Client Side: This is the client side of BMW Website and it is built with React JS, Firebase, React Bootstrap, Material UI etc.
 
