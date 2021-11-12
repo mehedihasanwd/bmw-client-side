@@ -45,7 +45,7 @@ const useFirebase = () => {
           .then(() => {})
           .catch((error) => {});
 
-        history.replace("/");
+        history.replace("/home");
         window.location.reload();
       })
       .catch((error) => {
