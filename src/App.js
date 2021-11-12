@@ -10,6 +10,7 @@ import Header from "./Components/Shared/Header";
 import Cars from "./Components/Cars/Cars";
 import PrivateRoute from "./Components/Login/PrivateRoute/PrivateRoute";
 import DashBoard from "./Components/Dashboard/Dashboard/Dashboard";
+import NotFound from "./Components/NotFound/NotFound";
 // import AddAProduct from "./Components/Dashboard/AddAProduct/AddAProduct";
 // import MyOrders from "./Components/Dashboard/MyOrders/MyOrders";
 // import ManageAllOrders from "./Components/Dashboard/ManageAllOrders/ManageAllOrders";
@@ -33,27 +34,6 @@ function App() {
             <Route path="/cars">
               <Cars></Cars>
             </Route>
-            {/* <Route path="/myorders">
-              <MyOrders></MyOrders>
-            </Route>
-            <Route path="/manageallorders">
-              <ManageAllOrders></ManageAllOrders>
-            </Route>
-            <Route path="/makeadmin">
-              <CreateAdmin></CreateAdmin>
-            </Route>
-            <Route path="/manageproducts">
-              <ManageProducts></ManageProducts>
-            </Route>
-            <Route path="/addaproduct">
-              <AddAProduct></AddAProduct>
-            </Route>
-            <Route path="/addareview">
-              <AddAReview></AddAReview>
-            </Route>
-            <Route path="/pay">
-              <Pay></Pay>
-            </Route> */}
             <PrivateRoute path="/dashboard">
               <DashBoard></DashBoard>
             </PrivateRoute>
@@ -66,6 +46,9 @@ function App() {
             </Route>
             <Route path="/register">
               <Register></Register>
+            </Route>
+            <Route path="*">
+              <NotFound></NotFound>
             </Route>
           </Switch>
         </Router>
