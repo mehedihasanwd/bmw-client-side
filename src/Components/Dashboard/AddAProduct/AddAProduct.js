@@ -17,10 +17,10 @@ const AddAProduct = () => {
       });
   };
   return (
-    <div className="min-vh-100 container py-3">
+    <div className="min-vh-100 container py-5">
       <div className="add-new-product py-4">
         <h1 className="mt-3 mb-5">Add a new Car</h1>
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form className="w-100" onSubmit={handleSubmit(onSubmit)}>
           <input
             {...register("name", { required: true, maxLength: 500 })}
             placeholder="Name..."

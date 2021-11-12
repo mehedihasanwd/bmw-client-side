@@ -48,7 +48,7 @@ const ManageAllOrders = () => {
   };
 
   return (
-    <div className="container min-vh-100 py-4">
+    <div className="container mx-auto min-vh-100 py-4">
       <h2>Manage All Orders: {orders.length}</h2>
       <div className="row row-cols-1 row-cols-md-2 g-5 py-5">
         {orders.map((order) => (
@@ -66,24 +66,28 @@ const ManageAllOrders = () => {
                   <span className="text-danger">Description: </span>
                   {order?.desc.slice(0, 20)}
                 </Card.Text>
-                <div className="d-flex justify-content-between">
+                <Card.Text>
+                  <span className="text-danger">Customer: </span>
+                  {order?.email}
+                </Card.Text>
+                <div className="d-flex flex-column">
                   <input
                     onChange={handleStatus}
                     type="text"
                     defaultValue={order.status}
-                    className="mx-1 w-25"
+                    className="mx-1 w-full my-1 rounded-0 border-1 p-2"
                   />
                   <button
-                    className="btn-danger border-0 fs-5 py-1 rounded-1 px-5 mx-1"
+                    onClick={() => handleUpdate(order._id)}
+                    className="btn-success border-0 fs-5 py-1 rounded-1 mx-1 my-1"
+                  >
+                    Update
+                  </button>
+                  <button
+                    className="btn-danger border-0 fs-5 py-1 rounded-1 px-5 mx-1 my-1"
                     onClick={() => handleDelete(order?._id)}
                   >
                     Delete
-                  </button>
-                  <button
-                    onClick={() => handleUpdate(order._id)}
-                    className="btn-success border-0 fs-5 py-1 rounded-1 mx-1"
-                  >
-                    Update
                   </button>
                 </div>
               </Card.Body>

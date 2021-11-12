@@ -49,7 +49,7 @@ const Register = () => {
 
   return (
     <>
-      <Container className="min-vh-100">
+      <Container className="min-vh-100 container py-5">
         <Grid sx={{ height: "70vh", py: 5, my: 4 }} container spacing={3}>
           <Grid
             sx={{
@@ -66,7 +66,7 @@ const Register = () => {
             md={12}
           >
             <Typography
-              sx={{ color: "#00b894" }}
+              sx={{ color: "#00b894", pt: 15 }}
               variant="h4"
               gutterBottom
               component="div"

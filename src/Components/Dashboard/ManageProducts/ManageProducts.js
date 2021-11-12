@@ -28,7 +28,7 @@ const ManageProducts = () => {
   };
 
   return (
-    <div className="container min-vh-100 py-4">
+    <div className="container min-vh-100 py-5">
       <h2>Manage Cars</h2>
       <div className="row row-cols-1 row-cols-md-3 g-5 py-5">
         {cars.map((car) => (

@@ -42,7 +42,7 @@ const Login = () => {
 
   return (
     <>
-      <Container className="min-vh-100">
+      <Container className="min-vh-100 container py-5">
         <Grid sx={{ height: "70vh", py: 5, my: 4 }} container spacing={2}>
           <Grid
             sx={{

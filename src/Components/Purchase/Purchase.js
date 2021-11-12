@@ -60,7 +60,7 @@ const Purchase = () => {
   };
 
   return (
-    <div className="min-vh-100 container py-3">
+    <div className="min-vh-100 container py-5">
       <h2>Purchase Your BMW</h2>
       <h3>Car Id: {car?._id}</h3>
 

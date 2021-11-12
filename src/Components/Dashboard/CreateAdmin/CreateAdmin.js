@@ -30,17 +30,17 @@ const CreateAdmin = () => {
   };
 
   return (
-    <div className="container min-vh-100 py-3">
+    <div className="container min-vh-100 py-5">
       <h2>Make Admin</h2>
-      <form onSubmit={handleAdmin}>
+      <form className="w-100" onSubmit={handleAdmin}>
         <TextField
           onBlur={handleOnblur}
           label="Email"
           type="email"
           variant="standard"
-          sx={{ width: "50%" }}
+          sx={{ width: "100%", mb: 3 }}
         />
-        <button type="submit" className="btn-danger border-0 me-3 rounded-1">
+        <button type="submit" className="btn-danger border-0 rounded-1">
           Submit
         </button>
       </form>
