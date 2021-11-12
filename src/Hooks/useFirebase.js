@@ -38,8 +38,6 @@ const useFirebase = () => {
         // Save User To Database
         saveUserPost(email, name);
 
-        /* "POST" */
-
         // Send name to firebase after user creation
         updateProfile(auth.currentUser, {
           displayName: name,
@@ -47,7 +45,7 @@ const useFirebase = () => {
           .then(() => {})
           .catch((error) => {});
 
-        history.replace("/");
+        history.replace("/dashboard");
         window.location.reload();
       })
       .catch((error) => {
@@ -79,7 +77,6 @@ const useFirebase = () => {
         // setUser(result.user);
         const destination = location?.state?.from || "/dashboard";
         const user = result.user;
-        // saveUser(user.email, user.displayName, "PUT");
         saveUserPut(user.email, user.displayName);
         history.replace(destination);
       })
