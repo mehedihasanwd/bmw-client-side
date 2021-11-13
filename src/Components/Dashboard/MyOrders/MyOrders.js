@@ -10,7 +10,7 @@ const MyOrders = () => {
     fetch(`https://still-atoll-84410.herokuapp.com/orders/${user?.email}`)
       .then((res) => res.json())
       .then((data) => setMyOrders(data));
-  }, []);
+  }, [user?.email]);
 
   const handleDelete = (id) => {
     const proceed = window.confirm("Are you sure, you wanna delete this?");

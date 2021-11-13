@@ -1,7 +1,6 @@
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./Components/Home/Home/Home";
-import Footer from "./Components/Shared/Footer";
 import Purchase from "./Components/Purchase/Purchase";
 import Register from "./Components/Login/Register/Register";
 import Login from "./Components/Login/Login/Login";
@@ -11,13 +10,6 @@ import Cars from "./Components/Cars/Cars";
 import PrivateRoute from "./Components/Login/PrivateRoute/PrivateRoute";
 import DashBoard from "./Components/Dashboard/Dashboard/Dashboard";
 import NotFound from "./Components/NotFound/NotFound";
-// import AddAProduct from "./Components/Dashboard/AddAProduct/AddAProduct";
-// import MyOrders from "./Components/Dashboard/MyOrders/MyOrders";
-// import ManageAllOrders from "./Components/Dashboard/ManageAllOrders/ManageAllOrders";
-// import ManageProducts from "./Components/Dashboard/ManageProducts/ManageProducts";
-// import AddAReview from "./Components/Dashboard/AddAReview/AddAReview";
-// import Pay from "./Components/Dashboard/Pay/Pay";
-// import CreateAdmin from "./Components/Dashboard/CreateAdmin/CreateAdmin";
 
 function App() {
   return (
